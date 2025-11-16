@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.14.0 on win32)" generated="2025-11-15T21:07:28.239009" rpa="false" schemaversion="5">
+<suite id="s1" name="Saucedemo Tests" source="C:\Users\HP\Desktop\DesafioRobot\saucedemo_automation\tests\saucedemo_tests.robot">
+<test id="s1-t1" name="Cenario 1: Compra Completa com standard_user" line="8">
+<kw name="Abrir Navegador e Acessar Site" type="SETUP">
+<msg time="2025-11-15T21:07:28.271908" level="FAIL">No keyword with name 'Abrir Navegador e Acessar Site' found.</msg>
+<status status="FAIL" start="2025-11-15T21:07:28.271828" elapsed="0.000168">No keyword with name 'Abrir Navegador e Acessar Site' found.</status>
+</kw>
+<kw name="Fechar Navegador" type="TEARDOWN">
+<msg time="2025-11-15T21:07:28.273475" level="FAIL">No keyword with name 'Fechar Navegador' found.</msg>
+<status status="FAIL" start="2025-11-15T21:07:28.273395" elapsed="0.000129">No keyword with name 'Fechar Navegador' found.</status>
+</kw>
+<doc>Realiza login, adiciona 2 produtos, remove 1 e finaliza a compra.</doc>
+<status status="FAIL" start="2025-11-15T21:07:28.269925" elapsed="0.003820">Setup failed:
+No keyword with name 'Abrir Navegador e Acessar Site' found.
+
+Also teardown failed:
+No keyword with name 'Fechar Navegador' found.</status>
+</test>
+<test id="s1-t2" name="Cenario 2: Compra Completa com performance_glitch_user" line="22">
+<kw name="Abrir Navegador e Acessar Site" type="SETUP">
+<msg time="2025-11-15T21:07:28.276445" level="FAIL">No keyword with name 'Abrir Navegador e Acessar Site' found.</msg>
+<status status="FAIL" start="2025-11-15T21:07:28.276393" elapsed="0.000095">No keyword with name 'Abrir Navegador e Acessar Site' found.</status>
+</kw>
+<kw name="Fechar Navegador" type="TEARDOWN">
+<msg time="2025-11-15T21:07:28.277622" level="FAIL">No keyword with name 'Fechar Navegador' found.</msg>
+<status status="FAIL" start="2025-11-15T21:07:28.277591" elapsed="0.000065">No keyword with name 'Fechar Navegador' found.</status>
+</kw>
+<doc>Realiza login com usuário lento, adiciona 2 produtos, remove 1 e finaliza a compra.</doc>
+<status status="FAIL" start="2025-11-15T21:07:28.274703" elapsed="0.003199">Setup failed:
+No keyword with name 'Abrir Navegador e Acessar Site' found.
+
+Also teardown failed:
+No keyword with name 'Fechar Navegador' found.</status>
+</test>
+<test id="s1-t3" name="Cenario 3: Tentar Finalizar Pedido com Carrinho Vazio" line="36">
+<kw name="Abrir Navegador e Acessar Site" type="SETUP">
+<msg time="2025-11-15T21:07:28.279488" level="FAIL">No keyword with name 'Abrir Navegador e Acessar Site' found.</msg>
+<status status="FAIL" start="2025-11-15T21:07:28.279460" elapsed="0.000062">No keyword with name 'Abrir Navegador e Acessar Site' found.</status>
+</kw>
+<kw name="Fechar Navegador" type="TEARDOWN">
+<msg time="2025-11-15T21:07:28.280450" level="FAIL">No keyword with name 'Fechar Navegador' found.</msg>
+<status status="FAIL" start="2025-11-15T21:07:28.280423" elapsed="0.000058">No keyword with name 'Fechar Navegador' found.</status>
+</kw>
+<doc>Realiza login, acessa o carrinho vazio e tenta finalizar o pedido.</doc>
+<status status="FAIL" start="2025-11-15T21:07:28.278577" elapsed="0.002106">Setup failed:
+No keyword with name 'Abrir Navegador e Acessar Site' found.
+
+Also teardown failed:
+No keyword with name 'Fechar Navegador' found.</status>
+</test>
+<doc>Testes de Automação do Fluxo de Vendas no SauceDemo</doc>
+<status status="FAIL" start="2025-11-15T21:07:28.240354" elapsed="0.042059"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Saucedemo Tests" id="s1" pass="0" fail="3" skip="0">Saucedemo Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-11-15T21:07:28.268804" level="ERROR">Error in file 'C:\Users\HP\Desktop\DesafioRobot\saucedemo_automation\tests\saucedemo_tests.robot' on line 3: Resource file 'saucedemo_keywords.robot' does not exist.</msg>
+</errors>
+</robot>

@@ -1,0 +1,48 @@
+*** Settings ***
+Documentation    Testes de Automação do Fluxo de Vendas no SauceDemo
+Resource         resource.robot
+Test Setup       Abrir Navegador e Acessar Site
+Test Teardown    Fechar Navegador
+
+*** Test Cases ***
+Cenario 1: Compra Completa com standard_user
+    [Documentation]    Realiza login, adiciona 2 produtos, remove 1 e finaliza a compra.
+    Realizar Login    standard_user    secret_sauce
+    # 2. Adicionar o segundo produto no carrinho (index 2)
+    Adicionar Produto    2
+    # 3. Adicionar um outro produto no carrinho (usando o terceiro produto, index 3)
+    Adicionar Produto    3
+    # 4. Remover o primeiro produto adicionado (o segundo produto da lista, index 2)
+    Remover Produto    2
+    # 5. Acessar carrinho e finalizar o pedido
+    Acessar Carrinho
+    Finalizar Pedido
+    Page Should Contain    Thank you for your order!
+
+Cenario 2: Compra Completa com performance_glitch_user
+    [Documentation]    Realiza login com usuário lento, adiciona 2 produtos, remove 1 e finaliza a compra.
+    Realizar Login    performance_glitch_user    secret_sauce
+    # 2. Adicionar o segundo produto no carrinho (index 2)
+    Adicionar Produto    2
+    # 3. Adicionar um outro produto no carrinho (usando o terceiro produto, index 3)
+    Adicionar Produto    3
+    # 4. Remover o primeiro produto adicionado (o segundo produto da lista, index 2)
+    Remover Produto    2
+    # 5. Acessar carrinho e finalizar o pedido
+    Acessar Carrinho
+    Finalizar Pedido
+    Page Should Contain    Thank you for your order!
+
+Cenario 3: Tentar Finalizar Pedido com Carrinho Vazio
+    [Documentation]    Realiza login, acessa o carrinho vazio e tenta finalizar o pedido.
+    Realizar Login    standard_user    secret_sauce
+    # 2. Acessar carrinho (que está vazio)
+    Acessar Carrinho
+    # 3. Tentar finalizar o pedido (clicar em Checkout)
+    Click Button    id=checkout
+    # 4. Validar que a página de informação do usuário foi carregada (indicando que o checkout foi iniciado)
+    Wait Until Page Contains    Checkout: Your Information
+    # 5. Tentar continuar sem preencher os dados
+    Click Button    id=continue
+    # 6. Validar a mensagem de erro (o campo de primeiro nome é obrigatório)
+    Page Should Contain    Error: First Name is required

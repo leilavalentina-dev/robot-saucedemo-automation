@@ -1,0 +1,14 @@
+# Arquivos de Sistema e IDEs
+.vs/
+*.vsidx
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Arquivos do Robot Framework
+output.xml
+log.html
+report.html
+__pycache__/
